@@ -1,0 +1,21 @@
+.text-primary {
+    color: #2D79BD !important
+}
+
+.bg-primary {
+    background-color: #2D79BD !important
+}
+
+.btn-primary {
+    background-color: #2D79BD !important;
+    border-color: #2D79BD !important;
+}
+
+.border-primary{
+    border-color: #2D79BD !important;
+}
+
+.dropdown-item:active {
+    background-color: unset !important;
+    color: unset !important;
+}
