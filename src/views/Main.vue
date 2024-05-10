@@ -9,7 +9,7 @@
 <template>
   <Navbar>
     <div class="row">
-      <Card v-for="(pokemon,index) of pokemons" :id="index + 1" :pokemon="pokemon"></Card>
+      <Card v-for="pokemon of pokemons" :pokemon="pokemon"></Card>
     </div>
   </Navbar>
 </template>

@@ -3,7 +3,7 @@ import { ref } from "vue";
 export function getPokemons () {
     const data = ref([]);
 
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=1302").
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=20").
         then(response => response.json()).
         then(result => data.value = result.results)
 
