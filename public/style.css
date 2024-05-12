@@ -1,3 +1,8 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+  
+
 .text-primary {
     color: #2D79BD !important
 }
@@ -15,7 +20,34 @@
     border-color: #2D79BD !important;
 }
 
+/* WARNA KUNING */
+
+.text-warning {
+    color: #FFCC01 !important
+}
+
+.bg-warning {
+    background-color: #FFCC01 !important
+}
+
+.btn-warning {
+    background-color: #FFCC01 !important;
+    border-color: #FFCC01 !important;
+}
+
+.border-warning{
+    border-color: #FFCC01 !important;
+}
+
+
+
+
 .dropdown-item:active {
     background-color: unset !important;
     color: unset !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: green;
 }

@@ -10,8 +10,8 @@
                     <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <ul class="p-3 navbar-nav me-auto d-flex justify-content-end gap-2" >
-                 
+                <ul class="p-3 navbar-nav me-auto d-flex justify-content-end gap-2 w-100" >
+                  
                 </ul>
             </div>
         </div>

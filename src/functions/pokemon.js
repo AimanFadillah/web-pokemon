@@ -1,13 +1,21 @@
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 
 export function getPokemons () {
+    const pokemons = ref([]);
     const data = ref([]);
 
     fetch("https://pokeapi.co/api/v2/pokemon?limit=1302").
         then(response => response.json()).
-        then(result => data.value = result.results)
+        then(result => {
+            pokemons.value = result.results
+            data.value = result.results
+        })
+    
+    function searchPokemon (text) {
+        pokemons.value = data.value.filter(pokemon => pokemon.name.includes(text))
+    }
 
-    return data;
+    return {pokemons,searchPokemon};
 }
 
 export function getPokemon (url) {
