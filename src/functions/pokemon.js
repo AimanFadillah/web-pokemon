@@ -3,6 +3,7 @@ import { reactive, ref } from "vue";
 export function getPokemons () {
     const pokemons = ref([]);
     const data = ref([]);
+    let time;
 
     fetch("https://pokeapi.co/api/v2/pokemon?limit=1302").
         then(response => response.json()).
@@ -12,7 +13,9 @@ export function getPokemons () {
         })
     
     function searchPokemon (text) {
-        pokemons.value = data.value.filter(pokemon => pokemon.name.includes(text))
+        clearTimeout(time)
+            time = setTimeout(() => pokemons.value = data.value.filter(pokemon => pokemon.name.includes(text.toLocaleLowerCase()))
+        ,100);
     }
 
     return {pokemons,searchPokemon};

@@ -2,7 +2,7 @@
   import Navbar from '@/components/navbar.vue';
   import Card from '@/components/card.vue';
   import { getPokemons } from '@/functions/pokemon';
-import { ref } from 'vue';
+  import { ref } from 'vue';
 
   const {pokemons,searchPokemon} = getPokemons()
   const search = ref("");
@@ -11,7 +11,7 @@ import { ref } from 'vue';
 <template>
   <Navbar>
     <form @submit.prevent="(e) => searchPokemon(search)" class="d-flex mt-4 border border-2 border-primary rounded p-2" >
-      <input v-model="search" type="search" class="form-control border-0 fs-4" placeholder="Pokemon name " >
+      <input @keyup="(e) => searchPokemon(e.target.value)" v-model="search" type="search" class="form-control border-0 fs-4" placeholder="Pokemon name " >
       <button class="btn btn-warning py-2 px-5 fw-bold text-primary" >Search</button>
     </form>
     <div class="row justify-content-center mt-4">
