@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="col-md-3 mb-3">
+    <div class="col-lg-3 col-6 mb-3">
         <div class="border border-2 border-primary rounded p-2">
             <img class="w-100" loading="lazy" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`" :alt="pokemon.name">
             <div class="row align-items-center mt-2">

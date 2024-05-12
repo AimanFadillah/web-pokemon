@@ -1,7 +1,20 @@
 * {
     font-family: "Poppins", sans-serif;
 }
+
+/* UNSET STYLE BOOTSTRAP */
+
+.dropdown-item:active {
+    background-color: unset !important;
+    color: unset !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: green;
+}
   
+/* WARNA UTAMA */
 
 .text-primary {
     color: #2D79BD !important
@@ -39,15 +52,10 @@
     border-color: #FFCC01 !important;
 }
 
-
-
-
-.dropdown-item:active {
-    background-color: unset !important;
-    color: unset !important;
+/* RESPONSIVE INPUT */
+@media (min-width: 768px) {
+    .input-search {
+        font-size: 24px;
+    }
 }
 
-.form-control:focus {
-    box-shadow: none;
-    border-color: green;
-}
