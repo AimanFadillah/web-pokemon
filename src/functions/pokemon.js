@@ -18,10 +18,10 @@ export function getPokemons () {
     }
     
     function searchPokemon (text) {
-        if(text === "") return pokemons.value = data.value;
         clearTimeout(time)
-            time = setTimeout(() => pokemons.value = data.value.filter(pokemon => pokemon.name.includes(text.toLocaleLowerCase()))
-        ,100);
+        if(text === "") return pokemons.value = data.value;
+        time = setTimeout(() => pokemons.value = data.value.filter(pokemon => pokemon.name.includes(text.toLocaleLowerCase()))
+        ,400);
     }
 
     return {pokemons,searchPokemon};
