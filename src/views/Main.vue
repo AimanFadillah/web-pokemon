@@ -10,7 +10,7 @@
 
 <template>
   <Navbar>
-    <form @submit.prevent="(e) => searchPokemon(search)" class="d-flex mt-4 border border-2 border-primary rounded p-lg-2 p-1 " >
+    <form @submit.prevent="(e) => searchPokemon(search)" class="d-flex mt-4 border border-2 border-primary rounded p-lg-2 p-1 shadow" >
       <input @keyup="(e) => searchPokemon(e.target.value)" v-model="search" type="text" class="form-control border-0 input-search" placeholder="Pokemon name " >
       <button class="btn btn-warning py-lg-2 px-lg-5 fw-bold text-primary" >Search</button>
     </form>
