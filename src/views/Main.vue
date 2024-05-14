@@ -37,14 +37,14 @@
               <h6><span class="text-dark fw-bold" >Order</span> : {{ pokemon.order }}</h6>
             </div>
             <div class="col-6">
-              <h6><span class="text-dark fw-bold" >Base Experience</span> : {{ pokemon.base_experience }}</h6>
+              <h6><span class="text-dark fw-bold" >Experience</span> : {{ pokemon.base_experience }}</h6>
             </div>
             <div class="col-md-12 mt-3 fw-bold mb-2">
               Type:
             </div>
             <div class="col-md-12">
               <div class="row ps-2">
-                <div v-for="tipe of pokemon.types" :class="`col-2 text-center me-1 mb-1 d-inline type-${tipe.type.name} py-1`" style="border-radius: 15px;">
+                <div v-for="tipe of pokemon.types" :class="`col-sm-2 col-4 text-center me-1 mb-1 d-inline type-${tipe.type.name} py-1`" style="border-radius: 15px;">
                   {{ tipe.type.name.substring(0,1).toUpperCase() + tipe.type.name.substring(1) }}
                 </div>
               </div>
