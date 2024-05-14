@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <RouterLink :to="`/pokemon/${id}`" class="text-decoration-none text-dark col-lg-3 col-6 mb-3">
+    <div @click="$emit('getId',id)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-decoration-none text-dark col-lg-3 col-6 mb-3">
         <div class="border border-2 border-primary rounded p-2 shadow">
             <div class="row align-items-center mt-2">
                 <img class="w-100 col-12 order-2 order-sm-1" loading="lazy" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`" :alt="pokemon.name">
@@ -14,5 +14,5 @@
                 <h4 class="col-sm-2 order-1" ><i class="bi bi-bookmark text-primary" style="font-size: 20px;" ></i></h4>
             </div>
         </div>
-    </RouterLink>
+    </div>
 </template>

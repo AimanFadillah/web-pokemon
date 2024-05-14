@@ -59,3 +59,8 @@
     }
 }
 
+/* TYPE-COLOR */
+.type-bug{background-color: #729F3F;color: white}
+.type-grass{background-color: #9BCC50;color: black}
+.type-poison{background-color: #B97FC9;color: white}
+
