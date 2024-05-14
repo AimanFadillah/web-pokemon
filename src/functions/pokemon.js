@@ -27,11 +27,14 @@ export function getPokemons () {
     return {pokemons,searchPokemon};
 }
 
-export function getPokemon (url) {
-    const data = ref({});
-    fetch(url).
-        then(response => response.json()).
-        then(result => data.value = result.results)
+export function getPokemon () {
+    const pokemon = ref(false);
 
-    return data;
+    function setPokemon (id){
+        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).
+        then(response => response.json()).
+        then(result => pokemon.value = result)
+    }
+
+    return {pokemon,setPokemon};
 }

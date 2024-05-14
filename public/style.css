@@ -59,3 +59,23 @@
     }
 }
 
+/* TYPE-COLOR */
+.type-bug{background-color: #729F3F;color: white}
+.type-dragon{background-color: #F16E57;color: white}
+.type-fairy{background-color: #FDB9E9;color: black}
+.type-fire{background-color: #FD7D24;color: white}
+.type-ghost{background-color: #7B62A3;color: white}
+.type-ground{background-color: #AB9842;color: black}
+.type-normal{background-color: #AB9842;color: black}
+.type-psychic{background-color: #F366B9;color: white}
+.type-steel{background-color: #9EB7B8;color: black}
+.type-dark{background-color: #707070;color: white}
+.type-electric{background-color: #EED535;color: black}
+.type-fighting{background-color: #D56723;color: white}
+.type-flying{background-color: #3DC7EF;color: black}
+.type-grass{background-color: #9BCC50;color: black}
+.type-ice{background-color: #3DC7EF;color: black}
+.type-poison{background-color: #B97FC9;color: white}
+.type-rock{background-color: #A38C21;color: white}
+.type-water{background-color: #4592C4;color: white}
+
