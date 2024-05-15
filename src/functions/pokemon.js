@@ -31,6 +31,7 @@ export function getPokemon () {
     const pokemon = ref(false);
 
     function setPokemon (id){
+        pokemon.value = false;
         fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).
         then(response => response.json()).
         then(result => pokemon.value = result)
