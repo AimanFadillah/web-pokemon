@@ -23,12 +23,13 @@
   </Navbar>
   <Modal>
     <div v-if="pokemon != false" class="row">
+      <h1 class="fw-bold text-primary mb-2" style="font-size: 50px;" >{{pokemon.name.substring(0,1).toUpperCase() + pokemon.name.substring(1) }}</h1>
       <div class="col-lg-6 order-2 order-lg-1">
         <div class="row justify-content-center align-items-center flex-column" >
           <img class="img-fluid w-75 col-12 h-md-380px" loading="eager" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`" :alt="pokemon.name">
           <div class="row justify-content-between">
-            <h6 class="col-6"><span class="text-dark fw-bold" >Weight</span> : {{ pokemon.weight }}</h6>
-            <h6 class="col-6" ><span class="text-dark fw-bold" >Height</span> : {{ pokemon.height }}</h6>
+            <h6 class="col-6"><span class="text-dark fw-bold" >Weight</span> : {{ pokemon.weight * 100  }} g</h6>
+            <h6 class="col-6" ><span class="text-dark fw-bold" >Height</span> : {{ pokemon.height / 10 }} m</h6>
             <h6 class="col-6"><span class="text-dark fw-bold" >Order</span> : {{ pokemon.order }}</h6>
             <h6 class="col-6"><span class="text-dark fw-bold" >Experience</span> : {{ pokemon.base_experience }}</h6>
             <h6 class="col-md-12 mt-3 fw-bold mb-2">Type:</h6>
@@ -40,14 +41,13 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6 order-1">
-        <h1 class="fw-bold text-primary" style="font-size: 50px;" >{{pokemon.name}}</h1>
-        <div class="row justify-content-between align-items-center mt-md-4">
-          <div class="col-6 fs-5 fw-bold">
-            #{{ pokemon.id }}
-          </div>
-          <div class="col-6 text-primary text-end fw-bold">
-            <i class="bi bi-bookmark"></i> Add to Bookmark
+      <div class="col-lg-6 order-2">
+        <div class="row mt-4 mt-md-0">
+          <div v-for="stats of pokemon.stats" class="col-md-12 mb-4 px-4">
+            <h6>{{ stats.stat.name.substring(0,1).toUpperCase() + stats.stat.name.substring(1) }}</h6>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-primary" :style="{width:`${stats.base_stat - 20}%`}"></div>
+            </div>
           </div>
         </div>
       </div>
