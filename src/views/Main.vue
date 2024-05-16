@@ -27,8 +27,8 @@
         <div class="row justify-content-center align-items-center flex-column" >
           <img class="img-fluid w-75 col-12 h-md-380px" loading="eager" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`" :alt="pokemon.name">
           <div class="row justify-content-between">
-            <h6 class="col-6"><span class="text-dark fw-bold" >Weight</span> : {{ pokemon.weight }}</h6>
-            <h6 class="col-6" ><span class="text-dark fw-bold" >Height</span> : {{ pokemon.height }}</h6>
+            <h6 class="col-6"><span class="text-dark fw-bold" >Weight</span> : {{ pokemon.weight * 100  }} g</h6>
+            <h6 class="col-6" ><span class="text-dark fw-bold" >Height</span> : {{ pokemon.height / 10 }} m</h6>
             <h6 class="col-6"><span class="text-dark fw-bold" >Order</span> : {{ pokemon.order }}</h6>
             <h6 class="col-6"><span class="text-dark fw-bold" >Experience</span> : {{ pokemon.base_experience }}</h6>
             <h6 class="col-md-12 mt-3 fw-bold mb-2">Type:</h6>
