@@ -18,7 +18,7 @@
       <button class="btn btn-warning py-lg-2 px-lg-5 fw-bold text-primary" >Search</button>
     </form>
     <div class="row justify-content-center mt-4">
-      <Card @get-id="setPokemon" v-for="(pokemon,index) of pokemons" :id="pokemon.url.split('/')[6]" :pokemon="pokemon"></Card>
+      <Card @get-id="setPokemon" v-for="(pokemon) of pokemons" :id="pokemon.url.split('/')[6]" :pokemon="pokemon"></Card>
     </div>
   </Navbar>
   <Modal>
